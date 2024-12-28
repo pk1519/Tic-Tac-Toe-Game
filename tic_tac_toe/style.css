@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #f0f8ff; /* Light background color */
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #ff7f50, #1e90ff, #32cd32);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #add8e6; /* Light blue hover effect */
+}
+
+.cell.taken {
+    cursor: not-allowed;
+    background-color: #d3d3d3; /* Gray color for taken cells */
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #555;
+}
